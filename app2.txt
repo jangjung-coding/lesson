@@ -1,1 +1,1 @@
-master conflict
+new conflict
