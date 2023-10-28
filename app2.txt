@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 new conflict
+=======
+Hello this is me
+>>>>>>> new
