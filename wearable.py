@@ -6,6 +6,7 @@ path = 'raw_data_Liu.csv'
 
 df = pd.read_csv(path)
 df["ID"].unique()
+df
 
 # 0.실내 환경만 남겨두기 Location: (1 = indoor; -1 = outdoor)
 df[df["location"]==1] #3297
