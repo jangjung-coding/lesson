@@ -9,6 +9,7 @@ Acceleration: m/s2
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 path = 'subject1.csv' #subject.csv에 맞게 바꾸기 !!!
 
@@ -123,3 +124,13 @@ plt.plot(df['mean.act_60'], color='black')
 plt.plot(df['grad.act_60'], color='red')
 plt.plot(df['sd.act_60'], color='blue')
 #전반적으로 거의다 시간에 상관없이 같은 종류의 피처는 비슷한 양상을 보임. 즉 시간기준으로 데이터를 나누어 학습시켜도 될듯
+
+#Null값 확인
+df.isnull().sum()
+
+#피처별 상관관계 그림
+lili =list(df.columns)
+sns.set(style='whitegrid')
+sns.pairplot(df[lili])
+
+
